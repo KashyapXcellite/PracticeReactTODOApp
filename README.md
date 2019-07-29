@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Files to view for understanding
+- [index.js](src/index.js)
+- [App.js](src/App.js)
+- [List.js](src/List.js)
+
+## Styling file used
+- [App.css](src/static/css/App.css)
+
 ## React Lifecycle
 ![](https://hackernoon.com/hn-images/1*sn-ftowp0_VVRbeUAFECMA.png)
 

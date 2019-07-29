@@ -1,5 +1,9 @@
 import React from 'react';
 
+/**
+ * @author Kashyap Ashara
+ * This is List Component which item list from its props in this.props.items
+ */
 class List extends React.Component{
     
     constructor(props) {
@@ -10,24 +14,33 @@ class List extends React.Component{
         };
     }
 
+    /**
+     * This function is a Lifecycle of react which will always watch for its props and updated props
+     */
     UNSAFE_componentWillReceiveProps(nextProps){
         this.setState({
             items:nextProps.items
         })
     }
 
+    // this function is used to call the function passed in List component as function from parent Component
     markEditable = (id,event) => {
         this.props.changeItemValue(id,event.target.value)
     }
 
+    // this function is used to call the function passed in List component as function from parent Component
     markDone = (id,event) => {
         this.props.markItemDone(id)
     }
 
+    // this function is used to call the function passed in List component as function from parent Component
     removeItem = (id,event) => {
         this.props.deleteItem(id)
-    } 
-
+    }
+    
+    /**
+    * Here is your render() function which will contain the structure of your Virtual DOM of the component
+    */
     render() {
         return (
             <ul>
@@ -48,4 +61,7 @@ class List extends React.Component{
       }
 }
 
+/**
+ * Here you have to specify the export List syntax
+ */
 export default List;
